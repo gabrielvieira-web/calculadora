@@ -1,5 +1,5 @@
 body {
-    background-color: var(--background-azul-corpo);
+    background-color: var(--background-light-corpo);
 }
 
 /* CAMPO DE TEMAS */
@@ -16,13 +16,13 @@ body {
 }
 
 .calculadora__campo-temas__titulo {
-    color: var(--cor-branco);
+    color: var(--cor-amarelo-escuro-texto);
     font-size: 1.8rem;
     grid-area: 2/1/3/2;
 }
 
 .calculadora__campo-temas__texto {
-    color: var(--cor-branco);
+    color: var(--cor-amarelo-escuro-texto);
     text-transform: uppercase;
     font-size: 0.8rem;
     align-self: center;
@@ -30,7 +30,7 @@ body {
 }    
 
 .calculadora__campo-temas__number {
-    color: var(--cor-branco);
+    color: var(--cor-amarelo-escuro-texto);
     justify-self: center;
 }
 
@@ -39,7 +39,7 @@ body {
 }
 
 .calculadora__campo-temas__container-background {
-    background-color: var(--background-azul-teclas);
+    background-color: var(--background-light-teclas);
     padding: 5px;
     border-radius: 25px;
     width: 90px;
@@ -47,24 +47,25 @@ body {
 }
 
 .calculadora__campo-temas__container-background__bolinha {
-    background-color: var(--cor-vermelho-tecla-background);
+    background-color: var(--cor-laranja-tecla-background);
     width: 20px;
     height: 20px;
     border-radius: 50%;
     cursor: pointer;
+    transition: ease-in-out 0.5s;
 }
 
 /* TELA DE RESULTADO */
 
 .calculadora__tela-resultado {
-    background-color: var(--background-azul-tela);
+    background-color: var(--background-light-tela);
     margin-top: 20px;
     padding: 25px;
     border-radius: 8px;
 }
 
 .calculadora__tela-resultado__resultado {
-    color: var(--cor-branco);
+    color: var(--cor-amarelo-escuro-texto);
     text-align: end;
     font-size: 3rem;
 }
@@ -76,20 +77,20 @@ body {
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(5, 1fr);
     grid-gap: 1.2rem;
-    background-color: var(--background-azul-teclas);
+    background-color: var(--background-light-teclas);
     margin-top: 30px;
     padding: 5%;
     border-radius: 8px;
 }
 
 .calculadora__campo-numerico__botao {
-    background-color: var(--cor-laranja-acizentado-tecla-background);
-    color: var(--cor-azul-escuro-texto);
+    background-color: var(--cor-amarelo-acizentado-tecla-background);
+    color: var(--cor-amarelo-escuro-texto);
     font-size: 2.5rem;
     font-weight: 700;
     border-radius: 10px;
     border: none;
-    box-shadow: 0px 4px 1px var(--cor-laranja-acizentado-tecla-shadow);
+    box-shadow: 0px 4px 1px var(--cor-amarelo-acizentado-tecla-shadow);
     font-family: var(--font-principal);
     padding: 15px 0 5px 0;
     cursor: pointer;
@@ -100,16 +101,16 @@ body {
 }
 
 .del, .reset {
-    background-color: var( --teclas-azul-escuro-background);
+    background-color: var(--teclas-ciano-escuro-background);
     color: var(--cor-branco);
     text-transform: uppercase;
-    box-shadow: 0px 4px 1px var(--teclas-azul-escuro-shadow);
+    box-shadow: 0px 4px 1px var(--teclas-ciano-escuro-shadow);
     font-size: 1.5rem;
     padding: 15px;
 }
 
 .del:active, .reset:active {
-    background-color: var(--teclas-azul-escuro-hover);
+    background-color: var(--teclas-ciano-escuro-hover);
 }
 
 .reset {
@@ -117,16 +118,16 @@ body {
 }
 
 .igualdade {
-    background-color: var(--cor-vermelho-tecla-background);
+    background-color: var(--cor-laranja-tecla-background);
     color: var(--cor-branco);
-    box-shadow: 0px 4px 1px var(--cor-vermelho-escuro-tecla-shadow);
+    box-shadow: 0px 4px 1px var(--cor-laranja-escuro-tecla-shadow);
     font-size: 1.5rem;
     grid-column: 3/5;
     padding: 15px;
 }
 
 .igualdade:active {
-    background-color: var(--cor-vermelho-escuro-tecla-hover);
+    background-color: var(--cor-laranja-escuro-tecla-hover);
 }
 
 @media screen and (max-width: 768px) {

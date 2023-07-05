@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
-@import url('theme1.css');
 
 :root {
     --cor-branco: hsl(0, 0%, 100%);
@@ -42,9 +41,11 @@
 
     --teclas-ciano-escuro-background: hsl(185, 42%, 37%);
     --teclas-ciano-escuro-shadow: hsl(185, 58%, 25%);
+    --teclas-ciano-escuro-hover: hsl(185, 50%, 55%);
 
     --cor-laranja-tecla-background: hsl(25, 98%, 40%);
     --cor-laranja-escuro-tecla-shadow: hsl(25, 99%, 27%);
+    --cor-laranja-escuro-tecla-hover:  hsl(25, 100%, 50%);
 
     --cor-amarelo-acizentado-tecla-background: hsl(45, 7%, 89%);
     --cor-amarelo-acizentado-tecla-shadow: hsl(35, 11%, 61%);
@@ -65,6 +66,7 @@
 
     --teclas-roxo-escuro-background: hsl(281, 89%, 26%);
     --teclas-roxo-escuro-shadow: hsl(285, 91%, 52%);
+    --teclas-roxo-escuro-hover: hsl(281, 89%, 35%);
 
     --cor-ciano-tecla-background: hsl(176, 100%, 44%);
     --cor-ciano-tecla-shadow: hsl(177, 92%, 70%);
@@ -93,4 +95,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: ease-in 0.5s;
+}
+
+.theme1 {
+    transform: translate(0px);
+    background-color: var(--cor-vermelho-tecla-background);
+}
+
+.theme2 {
+    transform: translate(29px);
+    background-color: var(--cor-laranja-tecla-background);
+}
+
+.theme3 {
+    transform: translate(60px);
+    background-color: var(--cor-ciano-tecla-background);
 }
