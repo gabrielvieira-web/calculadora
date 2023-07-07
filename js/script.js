@@ -1,3 +1,53 @@
+const numeros = document.querySelectorAll("[data-number]");
+const operadores = document.querySelectorAll("[data-operator]");
+const botaoDelete = document.querySelector("[data-del]");
+const botaoReset = document.querySelector("[data-reset]");
+const botaoigualdade = document.querySelector("[data-igualdade]");
+const resultado = document.querySelector("[data-resultado]");
+
+numeros.forEach((numero) => numero.addEventListener("click", (e) => {
+
+    const numero = e.target.innerText;
+    resultado.innerHTML = resultado.innerHTML + numero;
+
+}));
+
+operadores.forEach((operador) => operador.addEventListener("click", (e) => {
+
+    const operador = e.target.innerText
+    if (resultado.innerHTML === "") {
+        return;
+    } else {
+        resultado.innerHTML = resultado.innerHTML + operador;
+    };
+
+}));
+
+botaoDelete.addEventListener("click", () => {
+    resultado.innerText = resultado.innerText.slice(0, -1);
+});
+
+botaoReset.addEventListener("click", () => {
+    resultado.innerText = "";
+});
+
+botaoigualdade.addEventListener("click", () => {
+
+    if (resultado.innerHTML === "") {
+        return;
+    } else {
+        if (resultado.innerHTML.indexOf("x") > 0) {
+            const trocaFormatoDoOperador = resultado.innerHTML.replace("x", "*")
+            resultado.innerHTML = eval(trocaFormatoDoOperador);                                                                                                                                                                                                                                                       
+        } else {
+            resultado.innerHTML = eval(resultado.innerHTML);
+        };
+    };
+    
+});
+
+// ESCOLHA DE TEMA
+
 const bolinhaTheme = document.querySelector("[data-bolinha]");
 const linkCssTheme = document.querySelector("[data-theme]");
 
