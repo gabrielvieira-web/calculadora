@@ -93,8 +93,8 @@ body {
     font-family: var(--font-principal);
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    padding-top: 1%;
     transition: ease-in 0.5s;
 }
 
