@@ -62,7 +62,9 @@ body {
     margin-top: 20px;
     padding: 25px;
     border-radius: 8px;
-    height: 95px;
+    min-height: 95px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .calculadora__tela-resultado__resultado {

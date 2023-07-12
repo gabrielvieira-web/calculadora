@@ -8,18 +8,30 @@ const resultado = document.querySelector("[data-resultado]");
 numeros.forEach((numero) => numero.addEventListener("click", (e) => {
 
     const numero = e.target.innerText;
+
+    if (resultado.innerHTML.includes(".") && numero === "." || resultado.innerHTML === "" && numero === ".") return;
+
     resultado.innerHTML = resultado.innerHTML + numero;
 
 }));
 
 operadores.forEach((operador) => operador.addEventListener("click", (e) => {
 
-    const operador = e.target.innerText
-    if (resultado.innerHTML === "") {
-        return;
-    } else {
-        resultado.innerHTML = resultado.innerHTML + operador;
+    const operador = e.target.innerText;
+    const ultimoElementoDoResultado = resultado.innerHTML.length -1;
+    const operadorAnterior = resultado.innerHTML.slice(ultimoElementoDoResultado);
+
+    
+    
+    if (resultado.innerHTML === "" || resultado.innerHTML.lastIndexOf(operador) === ultimoElementoDoResultado) return;
+        
+    if (operadorAnterior === "+" || operadorAnterior === "-" || operadorAnterior === "x" || operadorAnterior === "/") {
+        if (operador != operadorAnterior) {
+            return;
+        }
     };
+    
+    resultado.innerHTML = resultado.innerHTML + operador;
 
 }));
 
@@ -37,7 +49,7 @@ botaoigualdade.addEventListener("click", () => {
         return;
     } else {
         if (resultado.innerHTML.indexOf("x") > 0) {
-            const trocaFormatoDoOperador = resultado.innerHTML.replace("x", "*")
+            const trocaFormatoDoOperador = resultado.innerHTML.replace(/x/g, "*");
             resultado.innerHTML = eval(trocaFormatoDoOperador);                                                                                                                                                                                                                                                       
         } else {
             resultado.innerHTML = eval(resultado.innerHTML);
